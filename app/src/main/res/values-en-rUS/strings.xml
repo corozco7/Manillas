@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Handcuffs</string>
+    <string name="material">Material</string>
+    <string name="dije">Trinket</string>
+    <string name="tipo">Type</string>
+    <string name="moneda">Currency</string>
+    <string name="calcular">Calculate</string>
+    <string name="limpiar">Clean</string>
+</resources>
