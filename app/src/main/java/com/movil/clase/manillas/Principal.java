@@ -56,15 +56,206 @@ public class Principal extends AppCompatActivity {
         }
         if (com <= 0){
             n1.setError(recursos.getString(R.string.error_dos));
-            return false
+            return false;
         }
         return true;
     }
 
     public void calcular(View v){
-        
+        int opcionMaterial, opcionDije, opcionTipo, opcionMoneda, cantidad, resultado = 0;
         if (validar()){
-
+            opcionMaterial = material.getSelectedItemPosition();
+            opcionDije = dije.getSelectedItemPosition();
+            opcionTipo = tipo.getSelectedItemPosition();
+            opcionMoneda = moneda.getSelectedItemPosition();
+            cantidad = Integer.parseInt(n1.getText().toString());
+            switch (opcionMaterial){
+                case 0:
+                    switch (opcionDije){
+                        case 0:
+                            switch (opcionTipo){
+                                case 0:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,100);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,100);
+                                            break;
+                                    }
+                                    break;
+                                case 1:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,100);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,100);
+                                            break;
+                                    }
+                                    break;
+                                case 2:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,80);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,80);
+                                            break;
+                                    }
+                                    break;
+                                case 3:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,70);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,70);
+                                            break;
+                                    }
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch (opcionTipo){
+                                case 0:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,120);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,120);
+                                            break;
+                                    }
+                                    break;
+                                case 1:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,120);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,120);
+                                            break;
+                                    }
+                                    break;
+                                case 2:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,100);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,100);
+                                            break;
+                                    }
+                                    break;
+                                case 3:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,90);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,90);
+                                            break;
+                                    }
+                                    break;
+                            }
+                            break;
+                    }
+                    break;
+                case 1:
+                    switch (opcionDije){
+                        case 0:
+                            switch (opcionTipo){
+                                case 0:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,90);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,90);
+                                            break;
+                                    }
+                                    break;
+                                case 1:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,90);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,90);
+                                            break;
+                                    }
+                                    break;
+                                case 2:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,70);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,70);
+                                            break;
+                                    }
+                                    break;
+                                case 3:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,50);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,50);
+                                            break;
+                                    }
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch (opcionTipo){
+                                case 0:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,110);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,110);
+                                            break;
+                                    }
+                                    break;
+                                case 1:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,110);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,110);
+                                            break;
+                                    }
+                                    break;
+                                case 2:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,90);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,90);
+                                            break;
+                                    }
+                                    break;
+                                case 3:
+                                    switch (opcionMoneda){
+                                        case 0:
+                                            resultado = Metodos.precioPeso(cantidad,80);
+                                            break;
+                                        case 1:
+                                            resultado = Metodos.precioDolar(cantidad,80);
+                                            break;
+                                    }
+                                    break;
+                            }
+                            break;
+                    }
+                    break;
+            }
+            res.setText(String.format(""+resultado));
         }
     }
 
