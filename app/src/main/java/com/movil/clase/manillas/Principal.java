@@ -49,13 +49,15 @@ public class Principal extends AppCompatActivity {
     }
 
     public boolean validar(){
-        int com = Integer.parseInt(n1.getText().toString());
         if (n1.getText().toString().isEmpty()){
             n1.setError(recursos.getString(R.string.error_uno));
+            res.setText("");
             return false;
         }
+        int com = Integer.parseInt(n1.getText().toString());
         if (com <= 0){
             n1.setError(recursos.getString(R.string.error_dos));
+            res.setText("");
             return false;
         }
         return true;
@@ -255,7 +257,7 @@ public class Principal extends AppCompatActivity {
                     }
                     break;
             }
-            res.setText(String.format(""+resultado));
+            res.setText(""+resultado);
         }
     }
 

@@ -6,6 +6,6 @@ public class Metodos {
     }
 
     public static int precioPeso(int cantidad, int precio){
-        return cantidad * precio * 2900;
+        return cantidad * precio * 3200;
     }
 }
